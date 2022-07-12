@@ -1,35 +1,12 @@
-/* ------------------- */
-/* Reset               */
-/* ------------------- */
+@import "./variables";
+@import "./reset";
 
-/* https://piccalil.li/blog/a-modern-css-reset/ */
-
-/* Box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Reset margins */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-figure,
-picture {
-  margin: 0; 
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: 400;
+.nav-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  flex-direction: column;
+  background-color: $clr-light;
 }
