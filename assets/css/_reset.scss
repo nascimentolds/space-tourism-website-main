@@ -9,6 +9,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
 }
 
 /* Reset margins */
@@ -21,7 +23,7 @@ h5,
 p,
 figure,
 picture {
-  margin: 0; 
+  margin: 0;
 }
 
 h1,
@@ -34,6 +36,11 @@ p {
   font-weight: 400;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 /* set up the body */
 body {
   font-family: $ff-sans-normal;
@@ -42,11 +49,10 @@ body {
   background-color: $clr-dark;
   line-height: 1.5;
   min-height: 100vh;
-  
   display: grid;
-  grid-template-rows: min-content 1fr;
-  
-  overflow-x: hidden;
+
+  background-size: cover;
+  background-position: bottom center;
 }
 
 /* make images easier to work with */
@@ -65,13 +71,26 @@ select {
 }
 
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
-*,
-*::before,
-*::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
+
+/* utitlity classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }

@@ -1,0 +1,250 @@
+/* colors */
+/* font-sizes */
+/* font-families */
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* set up the body */
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9375rem;
+  color: #ffffff;
+  background-color: #0b0d17;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utitlity classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 48px;
+  gap: 48px;
+  padding-top: 120px;
+  position: fixed;
+  z-index: 1000;
+  inset: 0 0 0 30%;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(1.5rem);
+          backdrop-filter: blur(1.5rem);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.primary-navigation a {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2.75px;
+}
+
+.primary-navigation a span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.primary-navigation a.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 5px solid #ffffff;
+}
+
+.primary-navigation[data-visible="true"] {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mobile-nav-toggle {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  right: 1rem;
+  top: 2rem;
+  background: transparent;
+  background-image: url(../shared/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border: 0;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url(../shared/icon-close.svg);
+}
+
+.mobile-nav-toggle:focus-visible {
+  outline: 5px solid white;
+  outline-offset: 5px;
+}
+
+.home {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+  color: #d0d6f9;
+  font-family: "Barlow", sans-serif;
+  line-height: 2em;
+  letter-spacing: 1.2px;
+  background-position: center center;
+  background-image: url(../home/background-home-mobile.jpg);
+}
+
+.home .travel {
+  font-size: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3.75px;
+}
+
+.home .space {
+  display: block;
+  margin-block: 3.5rem;
+  font-family: "Bellefair", serif;
+  font-size: 5rem;
+  color: #ffffff;
+}
+
+.home .large-button {
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+  background-color: #ffffff;
+  font-family: "Bellefair", serif;
+  color: #0b0d17;
+  text-transform: uppercase;
+  margin-top: 3.5rem;
+}
+
+.home .large-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms linear, -webkit-transform 750ms ease-in-out;
+  transition: opacity 500ms linear, -webkit-transform 750ms ease-in-out;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+  transition: opacity 500ms linear, transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
+}
+
+.home .large-button:hover::after, .home .large-button:focus::after {
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/*# sourceMappingURL=style.css.map */
