@@ -1,0 +1,12 @@
+body {
+    background: url(../home/background-home-mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    @include respond-to("md") {
+        background-image: url(../home/background-home-tablet.jpg);
+    }
+
+    @include respond-to("lg") {
+        background-image: url(../home/background-home-desktop.jpg);
+    }
+}
