@@ -99,8 +99,38 @@ select {
   border: 0;
 }
 
-.logo {
+.primary-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.primary-header .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+@media (min-width: 62rem) {
+  .primary-header .logo {
+    margin: 3.5rem clamp(1.5rem, 5vw, 3.5rem);
+  }
+  .primary-header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -5.5rem;
+    background: #666666;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .primary-navigation {
@@ -164,7 +194,7 @@ select {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 15%;
+    height: 6.5em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -172,6 +202,7 @@ select {
         justify-content: space-around;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    inset: 0 0 0 35%;
   }
   .primary-navigation a {
     padding-block: 2.3em;
@@ -191,7 +222,7 @@ select {
     transition: transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
     position: relative;
-    bottom: -2.3em;
+    bottom: -2.4em;
   }
   .primary-navigation a:hover:after {
     -webkit-transform: scaleX(1);
@@ -203,6 +234,20 @@ select {
   }
   .primary-navigation a span {
     display: none;
+  }
+}
+
+@media (min-width: 62rem) {
+  .primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 2rem;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-block: 2rem;
+  }
+  .primary-navigation a span {
+    display: inline;
   }
 }
 
