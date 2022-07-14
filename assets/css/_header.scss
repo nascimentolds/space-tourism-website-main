@@ -1,7 +1,8 @@
 .primary-header {
-  display: flex;
+  //display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 30%;
 
   .logo {
     margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -10,17 +11,6 @@
   @include respond-to("lg") {
     .logo {
       margin: 3.5rem clamp(1.5rem, 5vw, 3.5rem);
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      position: relative;
-      height: 1px;
-      width: 100%;
-      margin-right: -5.5rem;
-      background: $clr-white / 2.5;
-      order: 1;
     }
   }
 }
