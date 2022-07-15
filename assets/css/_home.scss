@@ -74,13 +74,14 @@
         padding-bottom: max(20vh);
         align-items: end;
 
-        *:first-child {
+        >*:first-child {
             grid-column: 2;
             display: flex;
             flex-direction: column;
             text-align: left;
             place-items: left;
-            max-width: 60%;
+            max-width: 70%;
+            margin-top: 10%;
 
             .travel {
                 font-size: $fs-700;
@@ -88,12 +89,21 @@
 
             p {
                 padding: 0;
-                max-width: 40%;
+                max-width: 50%;
             }
         }
 
-        *:last-child {
+        >*:last-child {
             grid-column: 3;
+            margin-right: 60%;
+        }
+
+        .large-button {
+            font-size: 1.5rem;
+            padding: 0 3em;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            margin-top: 2.5rem;
         }
     }
 }
