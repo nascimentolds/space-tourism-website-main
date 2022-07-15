@@ -27,7 +27,7 @@
     <script src="./assets/js/navigation.js" defer></script>
   </head>
 
-  <body class="home-bg">
+  <body class="destination-bg">
     <header class="primary-header">
       <div>
         <img
@@ -46,10 +46,10 @@
           class="primary-navigation"
         >
           <li>
-            <a href="index.html" class="active"><span>00</span>Home</a>
+            <a href="index.html" class="inactive"><span>00</span>Home</a>
           </li>
           <li>
-            <a href="destination.html" class="inactive"
+            <a href="destination.html" class="active"
               ><span>01</span>Destination</a
             >
           </li>
@@ -65,23 +65,42 @@
       </nav>
     </header>
 
-    <main class="home">
-      <div>
-        <h1 class="travel">
-          So, you want to travel to
-          <span class="space">Space</span>
-        </h1>
+    <main class="destination">
+      <h1><span>01</span> Pick your destination</h1>
+      <img
+        class="picture"
+        src="./assets/destination/image-moon.png"
+        alt="the moon"
+      />
+
+      <div class="underline-buttons">
+        <button aria-selected="true">Moon</button>
+        <button aria-selected="false">Mars</button>
+        <button aria-selected="false">Europa</button>
+        <button aria-selected="false">Titan</button>
+      </div>
+
+      <article class="destination-info">
+        <h2 class="fs-800 uppercase ff-serif">Moon</h2>
 
         <p>
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
         </p>
-      </div>
-      <div>
-        <a class="large-button" href="#">Explore</a>
-      </div>
+
+        <div class="destination-meta">
+          <div>
+            <h3>Avg. distance</h3>
+            <p>384,400 km</p>
+          </div>
+          <div>
+            <h3>Est. travel time</h3>
+            <p>3 days</p>
+          </div>
+        </div>
+      </article>
     </main>
   </body>
 </html>

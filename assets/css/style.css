@@ -205,6 +205,7 @@ select {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     inset: 0 0 0 35%;
+    position: absolute;
   }
   .primary-navigation a {
     padding-block: 2.3em;
@@ -283,20 +284,37 @@ select {
   }
 }
 
-body {
+.home-bg {
   background: url(../home/background-home-mobile.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
 @media (min-width: 45rem) {
-  body {
+  .home-bg {
     background-image: url(../home/background-home-tablet.jpg);
   }
 }
 
 @media (min-width: 62rem) {
-  body {
+  .home-bg {
     background-image: url(../home/background-home-desktop.jpg);
+  }
+}
+
+.destination-bg {
+  background: url(../destination/background-destination-mobile.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+@media (min-width: 45rem) {
+  .destination-bg {
+    background-image: url(../destination/background-destination-tablet.jpg);
+  }
+}
+
+@media (min-width: 62rem) {
+  .destination-bg {
+    background-image: url(../destination/background-destination-desktop.jpg);
   }
 }
 
@@ -418,5 +436,61 @@ body {
     aspect-ratio: 1;
     margin-top: 2.5rem;
   }
+}
+
+.destination {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  color: #d0d6f9;
+  font-family: "Barlow", sans-serif;
+  line-height: 2em;
+  letter-spacing: 1.2px;
+}
+
+.destination h1 {
+  font-size: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3.75px;
+}
+
+.destination h1 span {
+  margin-right: 0.5em;
+  color: gray;
+}
+
+.destination img {
+  max-width: 60%;
+}
+
+.destination .underline-buttons button {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  margin-inline: 10px;
+  background-color: transparent;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  letter-spacing: 2.7px;
+}
+
+.destination .underline-buttons button[aria-selected="true"] {
+  border-bottom: 0.2rem solid #ffffff;
+}
+
+.destination .underline-buttons button:hover {
+  border-bottom: 0.2rem solid gray;
+}
+
+.destination article h2 {
+  font-family: "Bellefair", serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */

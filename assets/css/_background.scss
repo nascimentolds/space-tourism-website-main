@@ -1,4 +1,4 @@
-body {
+.home-bg {
     background: url(../home/background-home-mobile.jpg) no-repeat center center fixed;
     background-size: cover;
 
@@ -8,5 +8,18 @@ body {
 
     @include respond-to("lg") {
         background-image: url(../home/background-home-desktop.jpg);
+    }
+}
+
+.destination-bg {
+    background: url(../destination/background-destination-mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    @include respond-to("md") {
+        background-image: url(../destination/background-destination-tablet.jpg);
+    }
+
+    @include respond-to("lg") {
+        background-image: url(../destination/background-destination-desktop.jpg);
     }
 }
