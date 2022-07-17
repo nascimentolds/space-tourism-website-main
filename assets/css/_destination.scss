@@ -23,7 +23,8 @@
     }
 
     img {
-        max-width: 60%;
+        max-width: 50%;
+        margin-block: 2em;
     }
 
     .underline-buttons {
@@ -50,10 +51,35 @@
 
     article {
         h2 {
+            padding-block: 2rem;
             font-family: $ff-serif;
-            font-size: $fs-800;
+            font-size: 3.5rem;
             text-transform: uppercase;
-            margin-bottom: 30px;
+        }
+
+        .destination-meta {
+            flex-direction: column;
+            border-top: 1px solid $clr-white / 0.1;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            
+            div {
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-family: $ff-sans-cond;
+                text-transform: uppercase;
+                color: $clr-light;
+                letter-spacing: 2.7px;
+                font-size: $fs-400;
+            }
+
+            p {
+                font-size: 1.75rem;
+                text-transform: uppercase;
+                font-family: $ff-serif;
+            }
         }
     }
 }

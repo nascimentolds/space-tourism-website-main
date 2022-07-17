@@ -464,7 +464,8 @@ select {
 }
 
 .destination img {
-  max-width: 60%;
+  max-width: 50%;
+  margin-block: 2em;
 }
 
 .destination .underline-buttons button {
@@ -488,9 +489,37 @@ select {
 }
 
 .destination article h2 {
+  padding-block: 2rem;
   font-family: "Bellefair", serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  margin-bottom: 30px;
+}
+
+.destination article .destination-meta {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: 1px solid white;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.destination article .destination-meta div {
+  margin-bottom: 2rem;
+}
+
+.destination article .destination-meta h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  letter-spacing: 2.7px;
+  font-size: 0.9375rem;
+}
+
+.destination article .destination-meta p {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
 }
 /*# sourceMappingURL=style.css.map */
