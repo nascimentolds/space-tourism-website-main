@@ -1,7 +1,10 @@
 .destination {
-    text-align: center;
-    display: grid;
-    place-items: center;
+    //text-align: center;
+    //display: grid;
+    //place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-inline: 1rem;
     //padding-bottom: 4rem;
     color: $clr-light;
@@ -62,7 +65,7 @@
             border-top: 1px solid $clr-white / 0.1;
             padding-top: 2rem;
             margin-top: 2rem;
-            
+
             div {
                 margin-bottom: 2rem;
             }
@@ -80,6 +83,14 @@
                 text-transform: uppercase;
                 font-family: $ff-serif;
             }
+        }
+    }
+
+    @include respond-to("md") {
+        align-items: left;
+        justify-content: left;
+
+        h1 {
         }
     }
 }
