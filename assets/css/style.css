@@ -494,28 +494,39 @@ select {
   border-bottom: 0.2rem solid gray;
 }
 
-.destination article h2 {
+.destination .destination-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.destination .destination-info h2 {
   padding-block: 2rem;
   font-family: "Bellefair", serif;
   font-size: 3.5rem;
   text-transform: uppercase;
 }
 
-.destination article .destination-meta {
+.destination .destination-info .destination-meta {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-top: 1px solid white;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   padding-top: 2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
-.destination article .destination-meta div {
+.destination .destination-info .destination-meta div {
   margin-bottom: 2rem;
 }
 
-.destination article .destination-meta h3 {
+.destination .destination-info .destination-meta h3 {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   color: #d0d6f9;
@@ -523,7 +534,7 @@ select {
   font-size: 0.9375rem;
 }
 
-.destination article .destination-meta p {
+.destination .destination-info .destination-meta p {
   font-size: 1.75rem;
   text-transform: uppercase;
   font-family: "Bellefair", serif;
@@ -531,12 +542,36 @@ select {
 
 @media (min-width: 45rem) {
   .destination {
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    margin-top: 2rem;
+  }
+  .destination h1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .destination img {
+    max-width: 40%;
+  }
+  .destination .destination-info h2 {
+    font-size: 4.5rem;
+    padding-block: 3rem;
+  }
+  .destination .destination-info > p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 78%;
+  }
+  .destination .destination-info .destination-meta {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-inline: 3rem;
+  }
+  .destination .destination-info .destination-meta p {
+    margin-top: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

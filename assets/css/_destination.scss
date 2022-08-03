@@ -1,7 +1,4 @@
 .destination {
-    //text-align: center;
-    //display: grid;
-    //place-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +49,11 @@
         }
     }
 
-    article {
+    .destination-info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
         h2 {
             padding-block: 2rem;
             font-family: $ff-serif;
@@ -62,9 +63,9 @@
 
         .destination-meta {
             flex-direction: column;
-            border-top: 1px solid $clr-white / 0.1;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
             padding-top: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
 
             div {
                 margin-bottom: 2rem;
@@ -87,10 +88,36 @@
     }
 
     @include respond-to("md") {
-        align-items: left;
-        justify-content: left;
-
+        margin-top: 2rem;
         h1 {
+            align-self: flex-start;
+        }
+
+        img {
+            max-width: 40%;
+        }
+
+        .destination-info {
+            h2 {
+                font-size: 4.5rem;
+                padding-block: 3rem;
+            }
+
+            > p {
+                align-self: center;
+                max-width: 78%;
+            }
+
+            .destination-meta {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: space-around;
+                margin-inline: 3rem;
+
+                p {
+                    margin-top: 1rem;
+                }
+            }
         }
     }
 }
