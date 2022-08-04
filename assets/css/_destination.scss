@@ -108,6 +108,10 @@
                 max-width: 78%;
             }
 
+            h2 {
+                font-size: 5.5rem;
+            }
+
             .destination-meta {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -122,6 +126,47 @@
     }
 
     @include respond-to("lg") {
-        
+        display: grid;
+        justify-items: start;
+        align-content: start;
+        grid-template-columns: 60% 40%;
+        grid-template-areas:
+            "h1 buttons"
+            "picture article";
+
+        h1 {
+            grid-area: h1;
+            margin-left: 20%;
+            font-size: $fs-700;
+        }
+
+        .underline-buttons {
+            grid-area: buttons;
+            margin-top: 15%;
+        }
+
+        .picture {
+            grid-area: picture;
+            max-width: 50%;
+            margin-inline: auto;
+            align-self: start;
+        }
+
+        .destination-info {
+            grid-area: article;
+            align-items: flex-start;
+            text-align: left;
+
+            > p {
+                max-width: 80%;
+                align-self: flex-start;
+            }
+
+            .destination-meta {
+                margin-inline: 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
     }
 }

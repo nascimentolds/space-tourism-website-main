@@ -561,6 +561,9 @@ select {
         align-self: center;
     max-width: 78%;
   }
+  .destination .destination-info h2 {
+    font-size: 5.5rem;
+  }
   .destination .destination-info .destination-meta {
     display: -ms-grid;
     display: grid;
@@ -572,6 +575,63 @@ select {
   }
   .destination .destination-info .destination-meta p {
     margin-top: 1rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .destination {
+    display: -ms-grid;
+    display: grid;
+    justify-items: start;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: "h1 buttons" "picture article";
+  }
+  .destination h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: h1;
+    margin-left: 20%;
+    font-size: 1.5rem;
+  }
+  .destination .underline-buttons {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: buttons;
+    margin-top: 15%;
+  }
+  .destination .picture {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: picture;
+    max-width: 50%;
+    margin-inline: auto;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .destination .destination-info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: article;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  .destination .destination-info > p {
+    max-width: 80%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .destination .destination-info .destination-meta {
+    margin-inline: 0;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=style.css.map */
