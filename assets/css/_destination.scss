@@ -120,4 +120,8 @@
             }
         }
     }
+
+    @include respond-to("lg") {
+        
+    }
 }
