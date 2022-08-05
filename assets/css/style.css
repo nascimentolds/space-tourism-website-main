@@ -628,7 +628,7 @@ select {
   }
   .destination .destination-info .destination-meta {
     margin-inline: 0;
-    width: 100%;
+    width: 85%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
