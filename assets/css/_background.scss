@@ -23,3 +23,29 @@
         background-image: url(../destination/background-destination-desktop.jpg);
     }
 }
+
+.crew-bg {
+    background: url(../crew/background-crew-mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    @include respond-to("md") {
+        background-image: url(../crew/background-crew-tablet.jpg);
+    }
+
+    @include respond-to("lg") {
+        background-image: url(../crew/background-crew-desktop.jpg);
+    }
+}
+
+.tech-bg {
+    background: url(../technology/background-technology-mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    @include respond-to("md") {
+        background-image: url(../technology/background-technology-tablet.jpg);
+    }
+
+    @include respond-to("lg") {
+        background-image: url(../technology/background-technology-desktop.jpg);
+    }
+}
