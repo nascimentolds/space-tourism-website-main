@@ -25,6 +25,7 @@
     <title>Space tourism website</title>
 
     <script src="./assets/js/navigation.js" defer></script>
+    <script src="./assets/js/destination.js" defer></script>
   </head>
 
   <body class="destination-bg">
@@ -68,36 +69,32 @@
     <main class="destination">
       <h1><span>01</span> Pick your destination</h1>
       <img
+        id="img"
         class="picture"
         src="./assets/destination/image-moon.png"
         alt="the moon"
       />
 
       <div class="underline-buttons">
-        <button aria-selected="true">Moon</button>
-        <button aria-selected="false">Mars</button>
-        <button aria-selected="false">Europa</button>
-        <button aria-selected="false">Titan</button>
+        <button aria-selected="true" onclick="destination(0)">Moon</button>
+        <button aria-selected="false" onclick="destination(1)">Mars</button>
+        <button aria-selected="false" onclick="destination(2)">Europa</button>
+        <button aria-selected="false" onclick="destination(3)">Titan</button>
       </div>
 
       <article class="destination-info">
-        <h2>Moon</h2>
+        <h2 id="name"></h2>
 
-        <p>
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
-        </p>
+        <p id="description"></p>
 
         <div class="destination-meta">
           <div>
             <h3>Avg. distance</h3>
-            <p>384,400 km</p>
+            <p id="distance"></p>
           </div>
           <div>
             <h3>Est. travel time</h3>
-            <p>3 days</p>
+            <p id="travel"></p>
           </div>
         </div>
       </article>
