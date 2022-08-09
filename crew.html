@@ -25,6 +25,7 @@
     <title>Space tourism website</title>
 
     <script src="./assets/js/navigation.js" defer></script>
+    <script src="./assets/js/crew.js" defer></script>
   </head>
 
   <body class="crew-bg">
@@ -70,33 +71,53 @@
       </h1>
 
       <div class="dot-indicators">
-        <button aria-selected="true">
+        <button
+          class="btn"
+          aria-selected="true"
+          value="0"
+          onclick="crew(0), changeBtnStatus(0)"
+        >
           <span class="sr-only">The commander</span>
         </button>
-        <button aria-selected="false">
+        <button
+          class="btn"
+          aria-selected="false"
+          value="1"
+          onclick="crew(1), changeBtnStatus(1)"
+        >
           <span class="sr-only">The mission specialist</span>
         </button>
-        <button aria-selected="false">
+        <button
+          class="btn"
+          aria-selected="false"
+          value="2"
+          onclick="crew(2), changeBtnStatus(2)"
+        >
           <span class="sr-only">The pilot</span>
         </button>
-        <button aria-selected="false">
+        <button
+          class="btn"
+          aria-selected="false"
+          value="3"
+          onclick="crew(3), changeBtnStatus(3)"
+        >
           <span class="sr-only">The crew engineer</span>
         </button>
       </div>
 
       <article class="crew-details">
         <header class="crew-header">
-          <h2>Commander</h2>
-          <p>Douglas Hurley</p>
+          <h2 id="role"></h2>
+          <p id="name"></p>
         </header>
-        <p>
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </p>
+        <p id="bio"></p>
       </article>
 
-      <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
+      <img
+        id="img"
+        src="assets/crew/image-douglas-hurley.png"
+        alt="Douglas Hurley"
+      />
     </main>
   </body>
 </html>

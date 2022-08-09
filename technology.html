@@ -25,6 +25,7 @@
     <title>Space tourism website</title>
 
     <script src="./assets/js/navigation.js" defer></script>
+    <script src="./assets/js/technology.js" defer></script>
   </head>
 
   <body class="tech-bg">
@@ -70,28 +71,48 @@
       </h1>
 
       <div class="circle-buttons">
-        <button aria-selected="true">1</button>
-        <button aria-selected="false">2</button>
-        <button aria-selected="false">3</button>
+        <button
+          class="btn"
+          aria-selected="true"
+          value="0"
+          onclick="technology(0), changeBtnStatus(0)"
+        >
+          1
+        </button>
+        <button
+          class="btn"
+          aria-selected="false"
+          value="1"
+          onclick="technology(1), changeBtnStatus(1)"
+        >
+          2
+        </button>
+        <button
+          class="btn"
+          aria-selected="false"
+          value="2"
+          onclick="technology(2), changeBtnStatus(2)"
+        >
+          3
+        </button>
       </div>
 
       <article class="tech-details">
         <header class="tech-header">
           <h2>The terminology...</h2>
-          <p>Launch vehicle</p>
+          <p id="name"></p>
         </header>
-        <p>
-          A launch vehicle or carrier rocket is a rocket-propelled vehicle used
-          to carry a payload from Earth's surface to space, usually to Earth
-          orbit or beyond. Our WEB-X carrier rocket is the most powerful in
-          operation. Standing 150 metres tall, it's quite an awe-inspiring sight
-          on the launch pad!
-        </p>
+        <p id="description"></p>
       </article>
 
       <picture class="img">
-        <source media="(min-width: 62rem)" srcset="assets/technology/image-launch-vehicle-portrait.jpg">
+        <source
+          id="portrait"
+          media="(min-width: 62rem)"
+          srcset="assets/technology/image-launch-vehicle-portrait.jpg"
+        />
         <img
+          id="landscape"
           src="assets/technology/image-launch-vehicle-landscape.jpg"
           alt="Launch-Vehicle"
         />

@@ -76,10 +76,38 @@
       />
 
       <div class="underline-buttons">
-        <button class="btn" id="0" aria-selected="true" onclick="destination(0)">Moon</button>
-        <button class="btn" id="1" aria-selected="false" onclick="destination(1)">Mars</button>
-        <button class="btn" id="2" aria-selected="false" onclick="destination(2)">Europa</button>
-        <button class="btn" id="3" aria-selected="false" onclick="destination(3)">Titan</button>
+        <button
+          class="btn"
+          aria-selected="true"
+          value="0"
+          onclick="destination(0), changeBtnStatus(0)"
+        >
+          Moon
+        </button>
+        <button
+          class="btn"
+          aria-selected="false"
+          value="1"
+          onclick="destination(1), changeBtnStatus(1)"
+        >
+          Mars
+        </button>
+        <button
+          class="btn"
+          aria-selected="false"
+          value="2"
+          onclick="destination(2), changeBtnStatus(2)"
+        >
+          Europa
+        </button>
+        <button
+          class="btn"
+          aria-selected="false"
+          value="3"
+          onclick="destination(3), changeBtnStatus(3)"
+        >
+          Titan
+        </button>
       </div>
 
       <article class="destination-info">

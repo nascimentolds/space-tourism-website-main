@@ -519,13 +519,15 @@ select {
   text-transform: uppercase;
   color: #d0d6f9;
   letter-spacing: 2.7px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .destination .underline-buttons button[aria-selected="true"] {
   border-bottom: 0.2rem solid #ffffff;
 }
 
-.destination .underline-buttons button:hover {
+.destination .underline-buttons button:hover:not([aria-selected="true"]) {
   border-bottom: 0.2rem solid gray;
 }
 
@@ -872,6 +874,8 @@ select {
   color: #ffffff;
   background-color: transparent;
   font-family: "Bellefair", serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .tech-main .circle-buttons button[aria-selected="true"] {

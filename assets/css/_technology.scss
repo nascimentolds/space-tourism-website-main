@@ -50,6 +50,7 @@
             color: $clr-white;
             background-color: transparent;
             font-family: $ff-serif;
+            transition: 0.3s;
 
             &[aria-selected="true"] {
                 background-color: $clr-white;
