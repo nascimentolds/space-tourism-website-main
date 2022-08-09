@@ -10,7 +10,7 @@ function destination(bt) {
   fetch("../../data/data.json")
     .then((response) => response.json())
     .then((data) => showData(data.destinations[bt]))
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err));  
 }
 
 destination(0);
