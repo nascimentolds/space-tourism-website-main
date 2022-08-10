@@ -958,6 +958,7 @@ select {
   }
   .tech-main img {
     max-width: 100%;
+    margin-bottom: 50px;
   }
   .tech-main .circle-buttons {
     display: -webkit-box;
