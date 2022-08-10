@@ -37,7 +37,7 @@
             text-transform: uppercase;
             color: $clr-light;
             letter-spacing: 2.7px;
-            transition: 0.3s;
+            transition: 250ms ease-in-out;
 
             &[aria-selected="true"] {
                 border-bottom: 0.2rem solid $clr-white;
